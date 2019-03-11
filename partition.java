@@ -8,7 +8,7 @@ public class partition {
 	data[0] = data[a];
 	data[a] = old;
 	while(start < end) {
-	    if (data[start] <= data[0]) {
+	    if (data[start] < data[0]) {
 		start++;
 	    } else {
 		old = data[start];
@@ -31,7 +31,7 @@ public class partition {
     }
     public static void main(String[] args) {
 	int[] data = new int[] {999,999,999,4,1,0,3,2,999,999,999};
-	System.out.println(partition(data, 0, data.length-1));
+	System.out.println(partition(data, 1, data.length-1));
 	System.out.println(toString(data));
     }
 }
